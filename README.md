@@ -7,3 +7,7 @@ Counter App Pro is a simple React-based application developed as part of my Day 
 # Interactive Task Tracker
 Interactive Task Tracker is a simple React app where a parent component manages a list of tasks, and child components receive data and functions (like mark as complete or delete task) through props. This demonstrates component communication, state lifting, and props drilling in React.
 
+
+# Task 03
+# Live Weather Dashboard
+**Live Weather Dashboard** is a React application that fetches real-time weather data from a public API and displays key weather information such as temperature, humidity, wind speed, and weather conditions. This project demonstrates the use of React's `useEffect` hook for API integration, `useState` for state management, and the Fetch API to display dynamic data in a clean and responsive user interface.
