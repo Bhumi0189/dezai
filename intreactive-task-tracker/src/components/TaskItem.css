@@ -1,0 +1,82 @@
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.65rem 1rem;
+  background: #fff;
+  border: 0.5px solid #e5e5e3;
+  border-radius: 8px;
+  transition: opacity 0.2s;
+}
+
+.task-item.done {
+  opacity: 0.5;
+}
+
+.task-item.done .task-label {
+  text-decoration: line-through;
+  color: #888780;
+}
+
+/* Check button */
+.check-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s;
+  padding: 0;
+}
+
+.check-btn.checked {
+  background: #639922;
+  border-color: #3b6d11;
+}
+
+.check-btn svg {
+  width: 11px;
+  height: 11px;
+}
+
+/* Label */
+.task-label {
+  flex: 1;
+  font-size: 15px;
+  color: #1a1a18;
+}
+
+/* Priority badge */
+.priority-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Delete button */
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #888780;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+
+.delete-btn:hover {
+  color: #a32d2d;
+}
+
+.delete-btn svg {
+  width: 16px;
+  height: 16px;
+}
