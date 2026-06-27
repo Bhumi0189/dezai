@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useWeather } from './useWeather'
 import { getWeather, getWindDir, DAYS } from './weatherUtils'
 import Skeleton from './Skeleton'
+import CitySearch from './CitySearch'
 
 // ── City list ──────────────────────────────────────────────
 const CITIES = [
@@ -95,16 +96,25 @@ export default function App() {
           </p>
         </div>
 
-        {/* City Selector */}
-        <div style={{
-          display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '1.5rem'
-        }}>
+
+        {/* Search bar */}
+        <div style={{ marginBottom: '1.25rem' }}>
+          <CitySearch onSelect={setCity} />
+        </div>
+
+        {/* Quick-pick label */}
+        <div style={{ fontSize: '11px', color: 'var(--muted)', letterSpacing: '0.07em', textTransform: 'uppercase', fontWeight: 500, marginBottom: '8px' }}>
+          Quick pick
+        </div>
+
+        {/* City pills */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '1.5rem' }}>
           {CITIES.map(c => (
             <button
               key={c.name}
               onClick={() => setCity(c)}
               style={{
-                padding: '8px 16px',
+                padding: '7px 15px',
                 borderRadius: '999px',
                 border: `1px solid ${city?.name === c.name ? 'var(--accent)' : 'var(--border)'}`,
                 background: city?.name === c.name ? 'var(--accent-soft)' : 'var(--surface)',
@@ -115,8 +125,8 @@ export default function App() {
                 transition: 'all 0.15s',
                 fontFamily: 'inherit',
               }}
-              onMouseEnter={e => { if(city?.name !== c.name) { e.target.style.borderColor = 'rgba(255,255,255,0.2)'; e.target.style.color = 'var(--text)' }}}
-              onMouseLeave={e => { if(city?.name !== c.name) { e.target.style.borderColor = 'var(--border)'; e.target.style.color = 'var(--muted)' }}}
+              onMouseEnter={e => { if(city?.name !== c.name) { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; e.currentTarget.style.color = 'var(--text)' }}}
+              onMouseLeave={e => { if(city?.name !== c.name) { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--muted)' }}}
             >
               {c.name} <span style={{ opacity: 0.5 }}>{c.country}</span>
             </button>
@@ -133,8 +143,8 @@ export default function App() {
             border: '1px dashed var(--border)',
           }}>
             <div style={{ fontSize: '56px', marginBottom: '1rem' }}>🌍</div>
-            <div style={{ fontSize: '18px', fontWeight: 500, marginBottom: '8px' }}>Pick a city to get started</div>
-            <div style={{ color: 'var(--muted)', fontSize: '14px' }}>Select any city above to fetch live weather data</div>
+            <div style={{ fontSize: '18px', fontWeight: 500, marginBottom: '8px' }}>Search or pick a city</div>
+            <div style={{ color: 'var(--muted)', fontSize: '14px' }}>Type any city name in the search bar, or pick a quick-pick above</div>
           </div>
         )}
 
