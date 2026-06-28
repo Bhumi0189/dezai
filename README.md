@@ -20,3 +20,11 @@ The User Registration Portal is a React-based signup form that demonstrates the 
 # Task 05
 # Dynamic Product Catalog
 The Dynamic Product Catalog is a React application that displays a list of products using the .map() method and allows users to search items with .filter(). Each product is rendered with a unique key to help React efficiently update the UI. This project demonstrates dynamic list rendering, conditional rendering, and real-time search functionality.
+
+# Task 06
+# E-Commerce Cart System
+E-Commerce Cart System is a React application that demonstrates global state management using the Context API. It includes a persistent shopping cart counter and Dark/Light theme toggle, allowing multiple components to share state without prop drilling. The application also uses localStorage to preserve user preferences across browser refreshes.
+
+# Task 07
+# Agile Kanban Board
+Agile Kanban Board is a Trello-inspired task management application built with React that combines state management, forms, props, Context API, side effects, and localStorage. Users can create, edit, move, and delete tasks across workflow columns while maintaining data persistence across browser sessions. The project also demonstrates a professional Git workflow using feature branches, development branches, and pull requests.
