@@ -1,0 +1,14 @@
+export const products = [
+  { id: 1,  name: "Wireless Noise-Cancelling Headphones", category: "Electronics", price: 24999, rating: 4.8, image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop&auto=format", badge: "Bestseller" },
+  { id: 2,  name: "Mechanical Keyboard",                  category: "Electronics", price: 12499, rating: 4.6, image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400&h=300&fit=crop&auto=format", badge: "New" },
+  { id: 3,  name: "Ergonomic Office Chair",               category: "Furniture",   price: 41999, rating: 4.7, image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?w=400&h=300&fit=crop&auto=format", badge: null },
+  { id: 4,  name: "Standing Desk",                        category: "Furniture",   price: 58999, rating: 4.5, image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop&auto=format", badge: "Popular" },
+  { id: 5,  name: "Minimalist Backpack",                  category: "Accessories", price: 7499,  rating: 4.4, image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop&auto=format", badge: null },
+  { id: 6,  name: "Smart Water Bottle",                   category: "Accessories", price: 3999,  rating: 4.3, image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400&h=300&fit=crop&auto=format", badge: "Sale" },
+  { id: 7,  name: "4K Webcam",                            category: "Electronics", price: 16499, rating: 4.6, image: "https://images.unsplash.com/photo-1587826080692-f439cd0b70da?w=400&h=300&fit=crop&auto=format", badge: null },
+  { id: 8,  name: "LED Desk Lamp",                        category: "Furniture",   price: 4999,  rating: 4.5, image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400&h=300&fit=crop&auto=format", badge: "New" },
+  { id: 9,  name: "Wireless Charging Pad",                category: "Electronics", price: 2999,  rating: 4.2, image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=400&h=300&fit=crop&auto=format", badge: null },
+  { id: 10, name: "Leather Notebook",                     category: "Accessories", price: 2499,  rating: 4.7, image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=300&fit=crop&auto=format", badge: "Popular" },
+  { id: 11, name: "Monitor Light Bar",                    category: "Electronics", price: 6699,  rating: 4.5, image: "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=400&h=300&fit=crop&auto=format", badge: null },
+  { id: 12, name: "Cable Management Kit",                 category: "Accessories", price: 1699,  rating: 4.1, image: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=400&h=300&fit=crop&auto=format", badge: "Sale" },
+];

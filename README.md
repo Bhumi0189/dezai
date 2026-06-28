@@ -16,3 +16,7 @@ Interactive Task Tracker is a simple React app where a parent component manages 
 # Task 04
 # User Registration Portal
 The User Registration Portal is a React-based signup form that demonstrates the use of controlled components. It manages user inputs such as name, email, and password using React's useState hook, ensuring that all form data is stored and controlled by React. This approach enables easy validation, secure form handling, and a smooth user experience.
+
+# Task 05
+# Dynamic Product Catalog
+The Dynamic Product Catalog is a React application that displays a list of products using the .map() method and allows users to search items with .filter(). Each product is rendered with a unique key to help React efficiently update the UI. This project demonstrates dynamic list rendering, conditional rendering, and real-time search functionality.
