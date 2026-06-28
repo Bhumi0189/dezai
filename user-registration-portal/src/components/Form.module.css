@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ── Layout ── */
+.root {
+  min-height: 100vh;
+  background: #0F1624;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Ambient glow orb ── */
+.orb {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(108, 99, 255, 0.18) 0%,
+    rgba(108, 99, 255, 0.04) 50%,
+    transparent 70%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbPulse 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes orbPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.8; }
+  50%       { transform: translate(-50%, -50%) scale(1.12); opacity: 1;   }
+}
+
+/* ── Card ── */
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: 20px;
+  padding: 2.8rem 2.4rem;
+  width: 100%;
+  max-width: 420px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Typography ── */
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6C63FF;
+  margin-bottom: 0.75rem;
+}
+
+.headline {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #F5F7FF;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.headline em {
+  font-style: italic;
+  color: #a89fff;
+}
+
+.subline {
+  font-size: 0.88rem;
+  color: rgba(245, 247, 255, 0.45);
+  margin-bottom: 1.4rem;
+  font-weight: 300;
+}
+
+/* ── Demo hint ── */
+.demoHint {
+  background: rgba(108, 99, 255, 0.08);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.76rem;
+  color: rgba(245, 247, 255, 0.5);
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.demoHint strong { color: #a89fff; font-weight: 500; }
+
+/* ── API error banner ── */
+.apiError {
+  background: rgba(255, 107, 107, 0.08);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.82rem;
+  color: #FF8080;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 1.4;
+}
+
+.apiErrorIcon {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+/* ── Form fields ── */
+.field {
+  margin-bottom: 1.2rem;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.45rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(245, 247, 255, 0.6);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.45rem;
+}
+
+.labelRow .label { margin-bottom: 0; }
+
+.forgotLink {
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.74rem;
+  color: #6C63FF;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+.forgotLink:hover { color: #a89fff; }
+
+.inputWrap { position: relative; }
+
+.input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: rgba(245, 247, 255, 0.06);
+  border: 1px solid rgba(245, 247, 255, 0.1);
+  border-radius: 10px;
+  color: #F5F7FF;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  -webkit-appearance: none;
+}
+
+.input::placeholder { color: rgba(245, 247, 255, 0.25); }
+
+.input:focus {
+  border-color: rgba(108, 99, 255, 0.7);
+  background: rgba(108, 99, 255, 0.08);
+}
+
+.inputError { border-color: rgba(255, 107, 107, 0.6) !important; }
+.inputPw    { padding-right: 3rem; }
+
+.toggleBtn {
+  position: absolute;
+  right: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem;
+  color: rgba(245, 247, 255, 0.35);
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+.toggleBtn:hover { color: rgba(245, 247, 255, 0.7); }
+
+.errorMsg {
+  font-size: 0.75rem;
+  color: #FF8080;
+  margin-top: 0.35rem;
+  font-weight: 400;
+}
+
+/* ── Password strength ── */
+.strength      { margin-top: 0.6rem; }
+.strengthBar   { height: 3px; border-radius: 2px; background: rgba(245, 247, 255, 0.08); overflow: hidden; }
+.strengthFill  { height: 100%; border-radius: 2px; transition: width 0.4s cubic-bezier(0.4,0,0.2,1), background 0.4s; }
+.strengthLabel { font-size: 0.7rem; color: rgba(245, 247, 255, 0.4); margin-top: 0.3rem; font-weight: 400; }
+
+/* ── Buttons ── */
+.btn {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-top: 1.6rem;
+  background: #6C63FF;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+}
+
+.btn:hover    { background: #7B74FF; }
+.btn:active   { transform: scale(0.98); }
+.btn:disabled { background: rgba(108, 99, 255, 0.35); cursor: not-allowed; }
+
+.btnTeal            { background: #2bbdaf; }
+.btnTeal:hover      { background: #35d4c4; }
+.btnTeal:disabled   { background: rgba(43, 189, 175, 0.35); }
+
+/* Loading spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  margin-top: 1.6rem;
+  font-size: 0.78rem;
+  color: rgba(245, 247, 255, 0.3);
+}
+
+.switchLink {
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  color: #7B74FF;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.switchLink:hover { color: #a89fff; }
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .card { padding: 2rem 1.4rem; border-radius: 14px; }
+  .headline { font-size: 1.6rem; }
+}
