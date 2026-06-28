@@ -78,7 +78,7 @@ export default function App() {
             <div className="brand-mark">◈</div>
             <span className="brand-name">Prod<span>ukto</span></span>
           </div>
-          <p className="header-tagline">Curated essentials for modern workspaces</p>
+          <p className="header-tagline">Shop essentials for modern workspaces</p>
         </div>
       </header>
 
