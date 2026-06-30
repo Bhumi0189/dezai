@@ -61,7 +61,7 @@ export default function ProductCard({ product, index, onAdd }) {
         <div className={styles.footer}>
           <div>
             <div className={styles.priceLabel}>Price</div>
-            <div className={styles.price}>${product.price.toFixed(2)}</div>
+            <div className={styles.price}>{product.price.toFixed(2)}</div>
           </div>
 
           {qty === 0 ? (

@@ -7,56 +7,56 @@ const PRODUCTS = [
   {
     id: 1, name: 'Wireless Headphones', category: 'Audio',
     image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80&auto=format&fit=crop',
-    price: 79.99, badge: 'Hot',
+    price: 790.99, badge: 'Hot',
     glowColor: 'linear-gradient(135deg, #6c47ff, #00c2ff)',
     desc: 'Crystal-clear sound, 30-hr battery, active noise cancellation.'
   },
   {
     id: 2, name: 'Mechanical Keyboard', category: 'Peripherals',
     image: 'https://images.unsplash.com/photo-1595225476474-87563907a212?w=600&q=80&auto=format&fit=crop',
-    price: 129.00,
+    price: 1290.00,
     glowColor: 'linear-gradient(135deg, #ff4d8d, #ff6b35)',
     desc: 'Tactile clicky switches, RGB backlight, aluminium top plate.'
   },
   {
     id: 3, name: 'USB-C Hub 7-in-1', category: 'Accessories',
     image: 'https://images.unsplash.com/photo-1625948515291-69613efd103f?w=600&q=80&auto=format&fit=crop',
-    price: 39.99,
+    price: 3990.99,
     glowColor: 'linear-gradient(135deg, #00c2ff, #6c47ff)',
     desc: 'HDMI 4K, 3× USB-A, SD, MicroSD, 100W PD passthrough.'
   },
   {
     id: 4, name: 'Webcam 4K', category: 'Video',
     image: 'https://plus.unsplash.com/premium_photo-1710961233810-5350d81d4b20?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2ViJTIwY2FtfGVufDB8fDB8fHww',
-    price: 89.00, badge: 'New',
+    price: 8900.00, badge: 'New',
     glowColor: 'linear-gradient(135deg, #ff4d8d, #6c47ff)',
     desc: 'Ultra-sharp 4K/30fps, built-in dual mic, auto-framing AI.'
   },
   {
     id: 5, name: 'Smart Desk Lamp', category: 'Lighting',
     image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=80&auto=format&fit=crop',
-    price: 49.99,
+    price: 4900.99,
     glowColor: 'linear-gradient(135deg, #ffcc00, #ff6b35)',
     desc: 'Adjustable colour temp 2700–6500K, 10-level dimming, USB port.'
   },
   {
     id: 6, name: 'Laptop Stand Pro', category: 'Ergonomics',
     image: 'https://images.unsplash.com/photo-1527443060795-0402a18106c2?w=600&q=80&auto=format&fit=crop',
-    price: 34.99,
+    price: 3400.99,
     glowColor: 'linear-gradient(135deg, #6c47ff, #00c2ff)',
     desc: 'Folding aluminium, adjustable angle, integrated cable management.'
   },
   {
     id: 7, name: 'Blue Light Glasses', category: 'Wellness',
     image: 'https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=600&q=80&auto=format&fit=crop',
-    price: 24.99,
+    price: 2400.99,
     glowColor: 'linear-gradient(135deg, #00c2ff, #ff4d8d)',
     desc: 'Reduces eye strain. Anti-glare lens. Lightweight titanium frame.'
   },
   {
     id: 8, name: 'Cable Organiser Kit', category: 'Accessories',
     image: 'https://images.unsplash.com/photo-1611078489935-0cb964de46d6?w=600&q=80&auto=format&fit=crop',
-    price: 14.99,
+    price: 1400.99,
     glowColor: 'linear-gradient(135deg, #ff6b35, #ffcc00)',
     desc: 'Velcro ties, silicone clips, cable labels. Clutter-free desk.'
   },
@@ -144,7 +144,7 @@ export default function Home({ onCartOpen }) {
 
             <div className={styles.heroPriceFloat}>
               <span className={styles.heroPriceLabel}>From</span>
-              <span className={styles.heroPriceNum}>$14.99</span>
+              <span className={styles.heroPriceNum}>14.99</span>
             </div>
           </div>
         </div>
