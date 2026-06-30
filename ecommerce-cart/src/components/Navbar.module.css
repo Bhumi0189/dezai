@@ -1,0 +1,162 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 68px;
+  background: var(--navbar-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 8px 32px rgba(108, 71, 255, 0.12);
+}
+
+/* Brand */
+.brand {
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: default;
+}
+.brandIcon {
+  font-size: 20px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: spin-slow 12s linear infinite;
+  display: inline-block;
+}
+.brandAccent {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text2);
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent2);
+  box-shadow: 0 0 8px var(--accent2);
+  animation: pulse-ring 2s ease infinite;
+}
+
+/* Right section */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Theme button */
+.themeBtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+.themeBtn:hover {
+  transform: rotate(20deg) scale(1.1);
+  background: var(--surface-hover);
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+.themeBtnInner {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Cart button */
+.cartBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--btn-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: visible;
+}
+.cartBtn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(108, 71, 255, 0.5);
+}
+.cartBtn:active {
+  transform: scale(0.97);
+}
+.cartIcon {
+  font-size: 16px;
+  animation: cart-bounce 0.5s ease;
+}
+.cartLabel {
+  font-size: 14px;
+}
+
+/* Badge */
+.badge {
+  position: relative;
+  background: #fff;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  animation: badge-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.badgePulse {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(255,255,255,0.6);
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+@media (max-width: 640px) {
+  .navbar { padding: 0 16px; }
+  .tagline { display: none; }
+  .cartLabel { display: none; }
+}
